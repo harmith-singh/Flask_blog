@@ -1,18 +1,16 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route("/")
-def hello_world():
-    return '<p>Hello, World!</p>'
+def main():
+    return render_template('index.html')
 
 
-@app.route("/harmith")
-def harmith():
-    return '<h1>Hello Harmith</h1>'
+@app.route("/about")
+def about():
+    return render_template('about.html')
 
 
-# setting 'debug=True' will make the app auto-reload whenever we make some changes in the backend
-# on final run, remove this as default debug=False
 app.run(debug=True)
