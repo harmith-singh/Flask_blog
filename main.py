@@ -10,7 +10,8 @@ def main():
 
 @app.route("/about")
 def about():
-    return render_template('about.html')
+    person = 'Harmith'
+    return render_template('about.html', name=person)
 
 
 app.run(debug=True)
