@@ -14,4 +14,9 @@ def about():
     return render_template('about.html', name=person)
 
 
+@app.route("/bootstrap")
+def bootstrap():
+    return render_template('bootstrap_sample.html')
+
+
 app.run(debug=True)
